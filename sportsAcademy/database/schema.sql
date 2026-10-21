@@ -93,18 +93,3 @@ CREATE TABLE IF NOT EXISTS Athlete_Sport (
         ON DELETE SET NULL
 );
 
-
-CREATE TABLE Performance (
-    performance_id INT PRIMARY KEY AUTO_INCREMENT,
-    athlete_id INT NOT NULL,
-    training_id INT NOT NULL,
-    performance_date DATE NOT NULL,
-    score VARCHAR(50),
-    remarks VARCHAR(255),
-
-    FOREIGN KEY (athlete_id)
-        REFERENCES Athlete(athlete_id),
-
-    FOREIGN KEY (training_id)
-        REFERENCES Training(training_id)
-);
