@@ -72,7 +72,6 @@ if ("ADMIN".equalsIgnoreCase(role)) {
     addDashboardButton(contentPanel, "My Sports");
     addDashboardButton(contentPanel, "My Attendance");
     addDashboardButton(contentPanel, "My Training Schedule");
-    addDashboardButton(contentPanel, "My Performance");
     addDashboardButton(contentPanel, "My Fees");
 
 } else {
@@ -135,9 +134,6 @@ private void addDashboardButton(JPanel panel, String buttonText) {
                   break;
             case "My Training Schedule":
                 selectedPanel = new Mytrainingpanel(loggedInUser);
-                 break;
-            case "My Performance":
-                selectedPanel = new Myperformancepanel(loggedInUser);
                  break;
             case "My Fees":
                 selectedPanel = new Myfeespanel(loggedInUser);
